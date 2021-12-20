@@ -52,7 +52,7 @@ class HotelComtroller extends PatternController {
         
             const newHotel = new hotelModel({
                 name:req.body.infor.name,
-                userId:req.body.auth.id,
+           
                 image:req.body.infor.image,
                 rating:10,
                 numReview:0,
