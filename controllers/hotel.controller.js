@@ -64,7 +64,6 @@ class HotelComtroller extends PatternController {
                 thunhap:0
             })
             newHotel.save()
-            await userModel.findOneAndUpdate({_id:ObjectId(req.body.auth.id)},{hotelId:newHotel._id})
             res.json({msg:"SuccessFully"})
         } catch (error) {
             
