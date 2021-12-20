@@ -1,0 +1,66 @@
+<% include ./layout/header %> 
+<div class="table-responsive">
+    <form id="createOrder" action="create_payment_url" method="POST">
+        <div class="form-group" style="display: none;">
+            <input type="text" value="testneanhem" name="room" >
+        </div>
+         <div class="form-group">
+              <label> ID Khach San</label>
+              <input type="text"  name="hotelId" value=<%= hotelId %> />
+          </div>
+          <div class="form-group">
+              <label> ID Khách Hàng</label>
+              <input type="text"  name="userId" value=<%= userId %> />
+          </div>
+           <div class="form-group">
+              <label> ID Chu So Huu Khach San</label>
+              <input type="text"  name="ownerId" value=<%= ownerId %> />
+          </div>
+        <div class="form-group"><label>Loại hàng hóa</label><select id="orderType" name="orderType"
+                class="form-control">
+                <option value="topup">Nạp tiền điện thoại</option>
+                <option value="billpayment" selected>Thanh toán hóa đơn</option>
+                <option value="fashion">Thời trang</option>
+            </select></div>
+           
+        <div class="form-group"><label>Số tiền</label>
+            <input id="amount" value=<%= price  %> name="amount" placeholder="Số tiền"
+                 class="form-control">
+                </div>
+        <div class="form-group"><label>Nội dung thanh toán</label><textarea id="orderDescription"
+                name="orderDescription" placeholder="Nội dung thanh toán"
+                class="form-control"><%= description  %> </textarea></div>
+        <div class="form-group"><label>Ngân hàng</label><select id="bankCode" name="bankCode" class="form-control">
+                <option value="">Không chọn</option>
+                <option value="VNPAYQR">Ngân hàng VNPAYQR</option>
+                <option value="NCB">Ngân hàng NCB</option>
+                <option value="SCB">Ngân hàng SCB</option>
+                <option value="SACOMBANK">Ngân hàng SACOMBANK</option>
+                <option value="EXIMBANK">Ngân hàng EXIMBANK</option>
+                <option value="MSBANK">Ngân hàng MSBANK</option>
+                <option value="NAMABANK">Ngân hàng NAMABANK</option>
+                <option value="VISA">Ngân hàng VISA</option>
+                <option value="VNMART">Ngân hàng VNMART</option>
+                <option value="VIETINBANK">Ngân hàng VIETINBANK</option>
+                <option value="VIETCOMBANK">Ngân hàng VIETCOMBANK</option>
+                <option value="HDBANK">Ngân hàng HDBANK</option>
+                <option value="DONGABANK">Ngân hàng Dong A</option>
+                <option value="TPBANK">Ngân hàng Tp Bank</option>
+                <option value="OJB">Ngân hàng OceanBank</option>
+                <option value="BIDV">Ngân hàng BIDV</option>
+                <option value="TECHCOMBANK">Ngân hàng Techcombank</option>
+                <option value="VPBANK">Ngân hàng VPBank</option>
+                <option value="AGRIBANK">Ngân hàng AGRIBANK</option>
+                <option value="MBBANK">Ngân hàng MBBank</option>
+                <option value="ACB">Ngân hàng ACB</option>
+                <option value="OCB">Ngân hàng OCB</option>
+                <option value="SHB">Ngân hàng SHB</option>
+                <option value="IVB">Ngân hàng IVB</option>
+            </select></div>
+        <div class="form-group"><label>Ngôn ngữ</label><select id="language" name="language" class="form-control">
+                <option value="vn">Tiếng Việt</option>
+                <option value="en">English</option>
+            </select></div><button id="btnPopup" type="submit" class="btn btn-default">Thanh toán</button>
+    </form>
+</div>
+<% include ./layout/footer %> 
