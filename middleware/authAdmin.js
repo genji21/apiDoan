@@ -3,6 +3,7 @@ const Users = require('../models/userModel')
 const authAdmin = async (req, res, next) =>{
     try {
         // Get user information by id
+        console.log(req.body.user.id)
         const user = await Users.findOne({
             _id: req.body.user.id
         })

@@ -4,6 +4,7 @@ const jwt = require('jsonwebtoken')
 const nodemailer = require('nodemailer');
 const fetch = require('node-fetch');
 const { paymentModel } = require('../models');
+const userModel = require('../models/userModel');
 const option = {
     service: 'gmail',
     auth: {
@@ -166,8 +167,37 @@ getAllUser: async (req,res)=>{
         
     }
 }
+,getDetailUser:async(req,res)=>{
+    try {
+        console.log(req.body.id)
+    const user = await Users.findById(req.body.id)
+    if(!user)return res.status(400).json({msg:"Failed"}) 
+      res.json({user})
 
-
+    } catch (err) {
+      return res.status(500).json({msg: err.message})
+        
+    }
+}
+,
+UpdateUserAdmin:async (req,res)=>{
+    try {
+        const {email,name,phone} = req.body.data.data
+        const user = await Users.findOneAndUpdate({_id:req.body.id},{email,name,phone})
+        res.json({user})
+    } catch (err) {
+        return res.status(500).json({msg:err.message})
+    }
+},
+DeleteUserAdmin : async(req,res)=>{
+    try {
+        console.log(req.params,req.body)
+        // await Users.findByIdAndDelete({_id:req.params.idUser})
+        res.json({msg:"delete success"})
+    } catch (err) {
+        return res.status(500).json({msg:err.message})
+    }
+}
 }
 const createAcessToken = (user) =>{
     return jwt.sign(user,process.env.ACCESS_TOKEN_SECERT,{expiresIn: '1d'})

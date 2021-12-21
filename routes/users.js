@@ -12,6 +12,11 @@ router.get('/history',auth,userCtrl.getHistoryPayment)
 router.get('/infor',auth,userCtrl.getUserInfor)
 router.patch('/update', auth, userCtrl.updateUser)
 // admin
-router.get('/getAllUser',authAdmin,userCtrl.getAllUser)
+router.post('/getAllUser',authAdmin,userCtrl.getAllUser)
+router.post('/getInforUser',authAdmin,userCtrl.getDetailUser)
+router.patch('/updateUser',authAdmin,userCtrl.UpdateUserAdmin)
+// debug 
+router.delete('/deleteUser/:idUser',userCtrl.DeleteUserAdmin)
+
 // router.get('/infor',userCtrl.getInfor)
 module.exports = router;
