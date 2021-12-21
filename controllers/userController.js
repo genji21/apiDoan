@@ -9,7 +9,7 @@ const option = {
     service: 'gmail',
     auth: {
         user: 'dinhphi751@gmail.com', // email hoặc username
-        pass: 'Dinhtruongphi12345' // password
+        pass: 'Dinhtruongphi12345!' // password
     }
 };
 
