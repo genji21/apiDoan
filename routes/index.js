@@ -33,21 +33,21 @@ router.get('/', function (req, res, next) {
           }
         }
       },
-      payment: {
-        uri: 'order',
-        cardTest: {
-          'Ngân hàng':'NCB',
-          'Số thẻ': '9704198526191432198',
-          'Tên chủ thẻ': 'NGUYEN VAN A',
-          'Ngày phát hành': '07/15',
-          'Mật khẩu OTP': '123456',
-        },
-        GET: {
-          list: 'http://localhost:3000/order',
-          detail: 'http://localhost:3000/order/61670e983a0733ea003bed90',
-          VN_PAY: 'http://localhost:3000/order/create_payment_url',
-        }
-      },
+      // payment: {
+      //   uri: 'order',
+      //   cardTest: {
+      //     'Ngân hàng':'NCB',
+      //     'Số thẻ': '9704198526191432198',
+      //     'Tên chủ thẻ': 'NGUYEN VAN A',
+      //     'Ngày phát hành': '07/15',
+      //     'Mật khẩu OTP': '123456',
+      //   },
+      //   GET: {
+      //     list: 'http://localhost:3000/order',
+      //     detail: 'http://localhost:3000/order/61670e983a0733ea003bed90',
+      //     VN_PAY: 'http://localhost:3000/order/create_payment_url',
+      //   }
+      // },
     },
     sort: {
       asc: 1,
