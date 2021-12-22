@@ -4,6 +4,6 @@ module.exports = {
     "vnp_TmnCode":"ODO5U169",
     "vnp_HashSecret":"WLDIFVOJZZFLOIHGPBKIAOZUIVGVCEZP",
     "vnp_Url": "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html",
-    "vnp_ReturnUrl": "/order/vnpay_return",
+    "vnp_ReturnUrl": "https://doanbooking.netlify.app",
     "redirec": "https://doanbooking.netlify.app",
 }
