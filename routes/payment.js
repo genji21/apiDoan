@@ -178,10 +178,10 @@ router.get('/vnpay_return', async function (req, res, next) {
         } else { //nếu thành công
         }
     });
+    res.render('success', {code: vnp_Params['vnp_ResponseCode'],title: 'Thành Công',redirec: config.get('redirec')})
         }
 
 
-        res.render('success', {code: vnp_Params['vnp_ResponseCode'],title: 'Thành Công',redirec: config.get('redirec')})
       
     } else{
         res.render('success', {code: '97',title: 'Thành Công'})
