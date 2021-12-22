@@ -5,5 +5,5 @@ module.exports = {
     "vnp_HashSecret":"WLDIFVOJZZFLOIHGPBKIAOZUIVGVCEZP",
     "vnp_Url": "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html",
     "vnp_ReturnUrl": "https://doanbooking.netlify.app",
-    "redirec": "ttps://doanbooking.netlify.app",
+    "redirec": "https://doanbooking.netlify.app",
 }
