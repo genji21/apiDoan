@@ -192,7 +192,7 @@ UpdateUserAdmin:async (req,res)=>{
 DeleteUserAdmin : async(req,res)=>{
     try {
         console.log(req.params,req.body)
-        // await Users.findByIdAndDelete({_id:req.params.idUser})
+        await Users.findByIdAndDelete({_id:req.params.idUser})
         res.json({msg:"delete success"})
     } catch (err) {
         return res.status(500).json({msg:err.message})

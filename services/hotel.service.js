@@ -49,6 +49,7 @@ class HotelService extends PatternService {
         }
     };
 
+    // function-- search
     search = async ({ search }) => {
         try {
 
